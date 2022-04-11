@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Work at Bank inc.",
+      "day": "March, 16th",
+      "reminder": true
+    },
+    {
+      "id": "6125d6cf-e5d2-492e-bd90-d2fe5aebaf94",
+      "day": "April, 11",
+      "reminder": false,
+      "text": "Work at Google inc."
+    }
+  ]
+}
