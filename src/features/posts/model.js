@@ -23,7 +23,7 @@ export const postsModel = {
   fetchPosts: thunk(async (actions, payload) => {
     try {
       actions.setStatus("loading")
-      const { data } = await axios.get("http://localhost:5000/tasks")
+      const { data } = await axios.get("https://ifeanyi-json-server-easy-peasy.herokuapp.com/tasks")
       actions.addPosts(data)
       actions.setStatus("success")
     } catch {
@@ -33,7 +33,7 @@ export const postsModel = {
   deletePosts: thunk(async (actions, {id}) => {
     try {
       actions.setStatus("loading")
-      await axios.delete(`http://localhost:5000/tasks/${id}`)
+      await axios.delete(`https://ifeanyi-json-server-easy-peasy.herokuapp.com/tasks/${id}`)
       actions.setStatus("success")
       actions.removePost({id})
     } catch {
@@ -52,7 +52,7 @@ export const postsModel = {
     const { id } = editData;
     try {
       // make axios request
-      const { data } = await axios.put(`http://localhost:5000/tasks/${id}`, editData);
+      const { data } = await axios.put(`https://ifeanyi-json-server-easy-peasy.herokuapp.com/tasks/${id}`, editData);
       actions.updateState({id, body: data})
       actions.setEditPost("")
     } catch {
@@ -62,7 +62,7 @@ export const postsModel = {
   savePost: thunk(async (actions, newData, helpers) => {   
     try {
       actions.setStatus("loading")
-      const { data } = await axios.post("http://localhost:5000/tasks", newData)
+      const { data } = await axios.post("https://ifeanyi-json-server-easy-peasy.herokuapp.com/tasks", newData)
       actions.addPosts(data)
       actions.setStatus("success")
     } catch {
