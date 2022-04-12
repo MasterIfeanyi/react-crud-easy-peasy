@@ -8,14 +8,13 @@
 
 html {
     font-family: 'Nunito', sans-serif;
-    font-size: 22px;
+    font-size: 1rem;
     color: #fff;
 }
 
 body {
     display: flex;
     min-height: 100vh;
-    /* background-color: dodgerblue; */
 }
 
 #root {
@@ -75,7 +74,7 @@ li{
 /* form */
 
 .form{
-    padding: 60px;
+    padding: 40px;
     margin-top: 40px;
 }
 
@@ -93,7 +92,7 @@ input.form-control{
 }
 
 .form-control{
-    border: 1px solid dodgerblue;
+    border: 0;
     color: black;
     border-radius: 10px;
     padding: 16px;
