@@ -12,9 +12,11 @@ function App() {
     <StoreProvider store={store}>
         <Routes>
           <Route path="/" element={<Home />}>
-            <Route index element={<Create />}></Route>
-            <Route path="/posts" element={<Posts/>}></Route>
-            <Route path="/edit/:id" element={<BodyEditor />}></Route>
+            <Route index element={<Create />}/>
+            <Route path="posts">
+              <Route index element={<Posts/>}/>
+            </Route>
+            <Route path="edit/:id" element={<BodyEditor />}></Route>
           </Route>
         </Routes>
     </StoreProvider>
